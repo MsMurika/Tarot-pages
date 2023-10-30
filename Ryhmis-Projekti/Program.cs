@@ -8,6 +8,13 @@ namespace Tarotdatabase // database for storing card information.
     {
         static void Main()
         {
+            // tuleeko tänne tämä? 
+            /*
+            var deck = new TarotdeckDB();
+
+            // app. ei tässä yhteydessä toimi, koska console app eikä asp.net core proggis, miten ohitetaan?
+            app.MapGet("/cards", () => deck.GetCards());
+            */
 
             // here we create the new database, tarotdeck.db
             using (var connection = new SqliteConnection("Data Source = tarotdeck.db"))
