@@ -329,23 +329,23 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Microsoft.Data.Sqlite >= 7.0.11"
+      "Microsoft.data.sqlite >= 7.0.11"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hulkk\\.nuget\\packages\\": {}
+    "C:\\Users\\ohto\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hulkk\\Documents\\GitHub\\Ryhmis-Projekti\\Ryhmis-Projekti.csproj",
+      "projectUniqueName": "C:\\Users\\ohto\\OneDrive\\Documents\\GitHub\\Tarot-pages\\Ryhmis-Projekti\\Ryhmis-Projekti.csproj",
       "projectName": "Ryhmis-Projekti",
-      "projectPath": "C:\\Users\\hulkk\\Documents\\GitHub\\Ryhmis-Projekti\\Ryhmis-Projekti.csproj",
-      "packagesPath": "C:\\Users\\hulkk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hulkk\\Documents\\GitHub\\Ryhmis-Projekti\\obj\\",
+      "projectPath": "C:\\Users\\ohto\\OneDrive\\Documents\\GitHub\\Tarot-pages\\Ryhmis-Projekti\\Ryhmis-Projekti.csproj",
+      "packagesPath": "C:\\Users\\ohto\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ohto\\OneDrive\\Documents\\GitHub\\Tarot-pages\\Ryhmis-Projekti\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hulkk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ohto\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -371,7 +371,7 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
-          "Microsoft.Data.Sqlite": {
+          "Microsoft.data.sqlite": {
             "target": "Package",
             "version": "[7.0.11, )"
           }
