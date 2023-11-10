@@ -3,6 +3,53 @@
 @{
     ViewData["Title"] = "Readings";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>[TEXT HERE!]</p>
+<style>
+    /* Tyylimäärittelyt */
+     body {
+            background-color: #171819; /* Aseta haluamasi taustaväri tässä */
+            color: #fff; /* Aseta tekstin väri kontrastina taustavärille */
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+    
+    #myTextBox {
+        margin-top: 30px;
+        width: 400px;
+        padding: 20px;
+        font-size: 16px;
+        margin-bottom: 10px
+    }
+     #myTextBox2 {
+        margin-top: 30px;
+        width: 400px;
+        height: 350px;
+        padding: 20px;
+        font-size: 16px;
+        margin-bottom: 10px
+    }
+    #myButton {
+            margin-top: 30px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer; /* Muuttaa hiiren osoittimen muotoa napin yläpuolella */
+        }
+</style>
+<body>
+    <br>
+    <br>
+<h1>@ViewData["Title"]</h1>
+<!-- Nappula -->
+<button id="myButton">Paina minua</button><br>
+
+<!-- Tekstilaatikko -->
+<input type="text" id="myTextBox" placeholder="Syötä teksti"><br>
+
+<!-- Voit lisätä tähän tarvittaessa muita HTML-elementtejä -->
+
+<!-- Tekstilaatikko -->
+<input type="text" id="myTextBox2" placeholder="Syötä teksti">
+
+</body>
+</html>
+
