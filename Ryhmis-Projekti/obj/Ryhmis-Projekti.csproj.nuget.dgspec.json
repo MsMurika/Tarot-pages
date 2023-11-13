@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ohto\\OneDrive\\Documents\\GitHub\\Tarot-pages\\Ryhmis-Projekti\\Ryhmis-Projekti.csproj": {}
+    "C:\\Users\\35844\\OneDrive\\sasky\\GitHub\\tarot-pages\\tarot-pages\\Ryhmis-Projekti\\Ryhmis-Projekti.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ohto\\OneDrive\\Documents\\GitHub\\Tarot-pages\\Ryhmis-Projekti\\Ryhmis-Projekti.csproj": {
+    "C:\\Users\\35844\\OneDrive\\sasky\\GitHub\\tarot-pages\\tarot-pages\\Ryhmis-Projekti\\Ryhmis-Projekti.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ohto\\OneDrive\\Documents\\GitHub\\Tarot-pages\\Ryhmis-Projekti\\Ryhmis-Projekti.csproj",
+        "projectUniqueName": "C:\\Users\\35844\\OneDrive\\sasky\\GitHub\\tarot-pages\\tarot-pages\\Ryhmis-Projekti\\Ryhmis-Projekti.csproj",
         "projectName": "Ryhmis-Projekti",
-        "projectPath": "C:\\Users\\ohto\\OneDrive\\Documents\\GitHub\\Tarot-pages\\Ryhmis-Projekti\\Ryhmis-Projekti.csproj",
-        "packagesPath": "C:\\Users\\ohto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ohto\\OneDrive\\Documents\\GitHub\\Tarot-pages\\Ryhmis-Projekti\\obj\\",
+        "projectPath": "C:\\Users\\35844\\OneDrive\\sasky\\GitHub\\tarot-pages\\tarot-pages\\Ryhmis-Projekti\\Ryhmis-Projekti.csproj",
+        "packagesPath": "C:\\Users\\35844\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\35844\\OneDrive\\sasky\\GitHub\\tarot-pages\\tarot-pages\\Ryhmis-Projekti\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ohto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\35844\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
