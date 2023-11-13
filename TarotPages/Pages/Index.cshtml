@@ -3,46 +3,123 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
 <div class="text-center">
-    <h1 class="display-4">Welcome to Tarot Reading Page!</h1>
+    <h2 class="display-4"></h2>
     <!--luodaan nappi, ja onbutton click kutsutaan sendReguest -->
     <button onclick="sendRequest()">TEST</button>
-    
-<script>
-    // otetaan yhteys serveriin
-    let ws = new WebSocket("ws://localhost:8000");
-    ws.onopen = (event) => {
-        console.log("websocket open");
-    }
-    //otetaan viesti vastaan serveriltä ja laitetaan se event stringiin
-    ws.onmessage = (event) => {
-        console.log("we got message");
-        //printataan stringi
-        console.log(event.data);
-    }
-    //jos tulee error niin printataan errorin syy
-    ws.onerror = (error) => {
-        console.log(error);
-    }
-    //lähetetään pyyntö "random-int" serverille
-    function sendRequest() {
-        ws.send("random-int");
-    }
 
-    function randomint()
-    {
-        console.log("Nappi painettu");
-       fetch("http://localhost:8000/gettext", {
-        method: "GET"}).then((response) => console.log(json));
-      
-        
-    }
-</script>
-    <br>
-    <img src="images/tarot-front.jpg" alt="Tarot Photo" width="500px" />
-    <br>
-    <br>
-    <p>Tarot card reading is a form of cartomancy whereby practitioners use tarot cards to gain insight into the past,
-        present or future. They formulate a question, then draw cards to interpret them for this end.</p>
+    <script>
+        // otetaan yhteys serveriin
+        let ws = new WebSocket("ws://localhost:8000");
+        ws.onopen = (event) => {
+            console.log("websocket open");
+        }
+        //otetaan viesti vastaan serveriltä ja laitetaan se event stringiin
+        ws.onmessage = (event) => {
+            console.log("we got message");
+            //printataan stringi
+            console.log(event.data);
+        }
+        //jos tulee error niin printataan errorin syy
+        ws.onerror = (error) => {
+            console.log(error);
+        }
+        //lähetetään pyyntö "random-int" serverille
+        function sendRequest() {
+            ws.send("random-int");
+        }
+
+        function randomint() {
+            console.log("Nappi painettu");
+            fetch("http://localhost:8000/gettext", {
+                method: "GET"
+            }).then((response) => console.log(json));
+
+
+        }
+    </script>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Background Image Gallery</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: url('images/tarot-front.jpg') no-repeat center center fixed;
+                background-size: cover;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                font-family: 'matura-mt-script-capitals-regular', sans-serif;
+            }
+
+            .content-box {
+                text-align: center;
+                color: #fff;
+                padding: 20px;
+                background: rgba(0, 0, 0, 0.8);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 1000px;
+                max-height: 500px;
+                border-radius: 15px;
+            }
+
+
+            .content {
+                padding: 20px;
+            }
+
+            h1 {
+                color: burlywood;
+                font-size: 38px;
+                margin: 0;
+            }
+
+            p {
+                color: goldenrod;
+                font-size: 16px;
+                line-height: 1.7;
+                margin: 0;
+                font-family: 'matura-mt-script-capitals-regular', sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="content-box">
+            <div class="content">
+                <h1>Tarot Reading Page</h1>
+                <br>
+                <p>
+                    Welcome to the mystical world of tarot readings! Tarot cards have been used for centuries as a tool
+                    for gaining insight into the past, present, and future. Each card in the deck carries a unique
+                    symbolism and meaning, offering a glimpse into the energies surrounding your life.
+                </p>
+                <p>
+                    Many people turn to tarot during moments of introspection, decision-making, or when faced with
+                    life's twists and turns. Take a moment, shuffle the cards, and embark on a journey of self-discovery
+                    through the ancient art of tarot.
+                </p>
+            </div>
+        </div>
+
+        <script>
+            const images = ['images/tarot-front.jpg', 'images/Empree.jpg', 'images/Fool.jpg', 'images/Temperane.jpg'];
+            let currentIndex = 0;
+
+            function changeBackground() {
+                currentIndex = (currentIndex + 1) % images.length;
+                document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
+            }
+
+            setInterval(changeBackground, 1000);
+        </script>
+    </body>
+    </html>
 </div>
