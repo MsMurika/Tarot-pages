@@ -40,8 +40,16 @@
     </script>
     <!DOCTYPE html>
     <html>
+
     <head>
         <style>
+            body {
+                background-image: url('images/tarot-front.jpg');
+                background-size: cover;
+                background-position: center;
+                transition: background-image 3s ease-in-out;
+            }
+
             body {
                 margin: 0;
                 padding: 0;
@@ -59,7 +67,7 @@
                 text-align: center;
                 color: #fff;
                 padding: 20px;
-                background: rgba(0, 0, 0, 0.8);
+                background: rgba(0, 0, 0, 0.9);
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -117,7 +125,7 @@
                 document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
             }
 
-            setInterval(changeBackground, 3000);
+            setInterval(changeBackground, 4000);
         </script>
     </body>
     </html>
