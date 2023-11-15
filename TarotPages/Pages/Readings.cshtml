@@ -7,49 +7,108 @@
 <style>
     /* Tyylimäärittelyt */
      body {
-            background-color: #171819; /* Aseta haluamasi taustaväri tässä */
-            color: #fff; /* Aseta tekstin väri kontrastina taustavärille */
+            background-color: #314865; /* Aseta haluamasi taustaväri tässä */
+            color: goldenrod; 
             font-family: Arial, sans-serif;
             margin: 0;
+            background-image: url(images/tarottable.png);
+            background-size:  contain; /* Taustakuvan skaalaus */
+            background-repeat: no-repeat;
+            background-position: right;
         }
+    h1 {
+            color: goldenrod; /* Muuta otsikon värin */
+            font-size: 30px; /* Muuta fonttikokoa */
+            font-weight: bold;
+           
+        }
+        p{
+            color: goldenrod; /* Muuta otsikon värin */
+            font-size: 20px; /* Muuta fonttikokoa */
+
+        }
+    #content-box {
+                text-align: center;
+                color: #fff;
+                padding: 20px;
+                background: rgba(0, 0, 0, 0.8);
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 600px;
+                max-height: 350px;
+                border-radius: 15px;
+                }
+    #content-box .inner-content {
+                rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                border-radius: 15px;
+            }
     
     #myTextBox {
-        margin-top: 30px;
-        width: 400px;
-        padding: 20px;
-        font-size: 16px;
-        margin-bottom: 10px
+            margin-top: 80px;
+            width: 500px;
+            padding: 20px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border-radius: 10px;/* Pyöristä kulmat */
+            background: rgba(0, 0, 0, 0.8);
+            color: burlywood; /* Tekstin väri tekstilaatikossa */
     }
      #myTextBox2 {
-        margin-top: 30px;
-        width: 400px;
-        height: 350px;
-        padding: 20px;
-        font-size: 16px;
-        margin-bottom: 10px
+            margin-top: 30px;
+            width: 500px;
+            min-height: 200px; 
+            height:auto;
+            padding: 20px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: burlywood;
+       
     }
     #myButton {
-            margin-top: 30px;
-            padding: 10px;
-            font-size: 16px;
+            margin-top: 100px;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
             cursor: pointer; /* Muuttaa hiiren osoittimen muotoa napin yläpuolella */
+            background-color:#94488c; /* Aseta haluamasi väri tässä */
+            color: goldenrod; /* Tekstin väri nappulassa */
+            border-radius: 10px;
+           
         }
+    #myImage {
+            position: absolute;
+            top: 120px; /* Voit muuttaa tätä arvoa sijoittaaksesi kuvan haluamaasi korkeuteen */
+            right: 150px; /* Voit muuttaa tätä arvoa sijoittaaksesi kuvan haluamaasi leveyteen */
+            width: 450px; /* Voit muuttaa tätä arvoa kuvan leveyden mukaan */
+            height: auto; /* Säilyttää kuvan alkuperäisen mittasuhteen */
+    }
+  
 </style>
 <body>
-    <br>
-    <br>
-<h1>@ViewData["Title"]</h1>
+ <div id="content-box">
+    <div class="inner-content">
+        <h1> @ViewData["Title"]</h1>
+        <br>
+<p>Let the Tarot cards guide you on your path.<br> Swipe the card to get the answers.</p>
+   </div>
+</div>
 <!-- Nappula -->
-<button id="myButton">Paina minua</button><br>
+<button id="myButton">Draw a card</button><br>
 
 <!-- Tekstilaatikko -->
-<input type="text" id="myTextBox" placeholder="Syötä teksti"><br>
+<input type="text" id="myTextBox" placeholder="Card name"><br>
 
 <!-- Voit lisätä tähän tarvittaessa muita HTML-elementtejä -->
 
-<!-- Tekstilaatikko -->
-<input type="text" id="myTextBox2" placeholder="Syötä teksti">
+<!-- Tekstilaatikko useammalla rivillä-->
+ <textarea id="myTextBox2" placeholder="Meaning..."></textarea>
 
 </body>
 </html>
+
 
