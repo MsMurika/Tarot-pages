@@ -25,14 +25,28 @@
         h2,
         p {
             color: white;
+
         }
+        .nav-link:hover {
+        color: burlywood !important;
+        }
+
+        .container a:hover {
+        color: burlywood !important;
+        }
+
+        .div
+        {
+            color: burlywood !important;
+        }
+
     </style>
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: black;">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">TarotPages</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">2
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
@@ -57,8 +71,9 @@
 
     <footer class="border-top footer text-muted" style="background-color: black;">
         <div class="container">
-            &copy; 2023 - TarotPages - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <span style="color: grey;">&copy; 2023 - TarotPages -</span> <a asp-area="" asp-page="/Privacy" >Privacy</a>
         </div>
+
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
