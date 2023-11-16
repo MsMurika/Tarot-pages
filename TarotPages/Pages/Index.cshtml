@@ -6,37 +6,7 @@
 <div class="text-center">
     <h2 class="display-4"></h2>
     <!--luodaan nappi, ja onbutton click kutsutaan sendReguest -->
-    <button onclick="sendRequest()">TEST</button>
-
-    <script>
-        // otetaan yhteys serveriin
-        let ws = new WebSocket("ws://localhost:8000");
-        ws.onopen = (event) => {
-            console.log("websocket open");
-        }
-        //otetaan viesti vastaan serveriltä ja laitetaan se event stringiin
-        ws.onmessage = (event) => {
-            console.log("we got message");
-            //printataan stringi
-            console.log(event.data);
-        }
-        //jos tulee error niin printataan errorin syy
-        ws.onerror = (error) => {
-            console.log(error);
-        }
-        //lähetetään pyyntö "random-int" serverille
-        function sendRequest() {
-            ws.send("random-int");
-        }
-
-        function randomint() {
-            console.log("Nappi painettu");
-            fetch("http://localhost:8000/gettext", {
-                method: "GET"
-            }).then((response) => console.log(json));
-
-
-        }
+   
     </script>
     <!DOCTYPE html>
     <html>
