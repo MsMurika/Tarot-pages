@@ -91,14 +91,49 @@
 </style>
 <body>
  <div id="content-box">
+    
     <div class="inner-content">
         <h1> @ViewData["Title"]</h1>
         <br>
 <p>Let the tarot cards guide you on your path.<br> Swipe the card to get the answers.</p>
    </div>
+   
+
+<script>
+    var nameResult = undefined;
+    var meaningResult = undefined;
+
+    // otetaan yhteys serveriin
+    let ws = new WebSocket("ws://localhost:8000");
+    ws.onopen = (event) => {
+        console.log("websocket open");
+    }
+    //otetaan viesti vastaan serveriltä ja laitetaan se event stringiin
+    ws.onmessage = (event) => {
+        console.log("we got message");
+        //printataan stringi
+        let value = JSON.parse(event.data);
+        if(value.name !== undefined) {
+            nameResult = value.name;
+            console.log(nameResult);
+        }else if(value.meaning !== undefined) {
+            meaningResult = value.meaning;
+             console.log(meaningResult);
+        }
+
+    }
+    //jos tulee error niin printataan errorin syy
+    ws.onerror = (error) => {
+        console.log(error);
+    }
+    //lähetetään pyyntö "random-int" serverille
+    function sendRequest() {
+        ws.send("random-int");
+    }
+    </script>
 </div>
 <!-- Nappula -->
-<button id="myButton">Draw a card</button><br>
+<button onclick="sendRequest()" id="myButton">Draw a card</button><br>
 
 <!-- Tekstilaatikko -->
 <input type="text" id="myTextBox" placeholder="Card name"><br>
