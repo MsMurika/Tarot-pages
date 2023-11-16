@@ -100,49 +100,53 @@
    
 
 <script>
-    var nameResult = undefined;
-    var meaningResult = undefined;
+            var nameResult = undefined;
+            var meaningResult = undefined;
 
-    // otetaan yhteys serveriin
-    let ws = new WebSocket("ws://localhost:8000");
-    ws.onopen = (event) => {
-        console.log("websocket open");
-    }
-    //otetaan viesti vastaan serveriltä ja laitetaan se event stringiin
-    ws.onmessage = (event) => {
-        console.log("we got message");
-        //printataan stringi
-        let value = JSON.parse(event.data);
-        if(value.name !== undefined) {
-            nameResult = value.name;
-            console.log(nameResult);
-        }else if(value.meaning !== undefined) {
-            meaningResult = value.meaning;
-             console.log(meaningResult);
-        }
+            let ws = new WebSocket("ws://localhost:8000");
+            ws.onopen = (event) => {
+                console.log("websocket open");
+            }
 
-    }
-    //jos tulee error niin printataan errorin syy
-    ws.onerror = (error) => {
-        console.log(error);
-    }
-    //lähetetään pyyntö "random-int" serverille
-    function sendRequest() {
-        ws.send("random-int");
-    }
-    </script>
-</div>
-<!-- Nappula -->
-<button onclick="sendRequest()" id="myButton">Draw a card</button><br>
+            ws.onmessage = (event) => {
+                console.log("we got message");
+                let value = JSON.parse(event.data);
+                if (value.name !== undefined) {
+                    nameResult = value.name;
+                    console.log(nameResult);
+                } else if (value.meaning !== undefined) {
+                    meaningResult = value.meaning;
+                    console.log(meaningResult);
+                }
 
-<!-- Tekstilaatikko -->
-<input type="text" id="myTextBox" placeholder="Card name"><br>
+            }
 
-<!-- Voit lisätä tähän tarvittaessa muita HTML-elementtejä -->
+            ws.onerror = (error) => {
+                console.log(error);
+            }
 
-<!-- Tekstilaatikko useammalla rivillä-->
- <textarea id="myTextBox2" placeholder="Meaning..."></textarea>
+            function sendRequest() {
+                ws.send("random-int");
+                updateTextboxes(); // Call the function to update textboxes
+            }
 
+            // Function to update textboxes with the randomized variables
+            function updateTextboxes() {
+                // Update the content of the textboxes
+                document.getElementById("myTextBox").value = nameResult;
+                document.getElementById("myTextBox2").value = meaningResult;
+            }
+        </script>
+    </div>
+
+    <!-- Nappula -->
+    <button onclick="sendRequest()" id="myButton">Draw a card</button><br>
+
+    <!-- Tekstilaatikko -->
+    <input type="text" id="myTextBox" placeholder="Card name"><br>
+
+    <!-- Tekstilaatikko useammalla rivillä-->
+    <textarea id="myTextBox2" placeholder="Meaning..."></textarea>
 </body>
 </html>
 
