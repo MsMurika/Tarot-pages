@@ -46,7 +46,7 @@
                 border-radius: 15px;
             }
     
-    #myTextBox {
+    #CardName {
             margin-top: 80px;
             width: 500px;
             padding: 20px;
@@ -56,7 +56,7 @@
             background: rgba(0, 0, 0, 0.8);
             color: burlywood; /* Tekstin väri tekstilaatikossa */
     }
-     #myTextBox2 {
+     #CardMeaning {
             margin-top: 30px;
             width: 500px;
             min-height: 200px; 
@@ -69,7 +69,7 @@
             color: burlywood;
        
     }
-    #myButton {
+    #Button {
             margin-top: 100px;
             padding: 20px;
             font-size: 20px;
@@ -80,7 +80,7 @@
             border-radius: 10px;
            
         }
-    #myImage {
+    #Image {
             
          
          
@@ -131,20 +131,20 @@
             // Function to update textboxes with the randomized variables
             function updateTextboxes() {
                 // Update the content of the textboxes
-                document.getElementById("myTextBox").value = nameResult;
-                document.getElementById("myTextBox2").value = meaningResult;
+                document.getElementById("CardName").value = nameResult;
+                document.getElementById("CardMeaning").value = meaningResult;
             }
         </script>
     </div>
 
     <!-- Nappula -->
-    <button onclick="sendRequest()" id="myButton">Draw a card</button><br>
+    <button onclick="sendRequest()" id="Button">Draw a card</button><br>
 
     <!-- Tekstilaatikko -->
-    <input type="text" id="myTextBox" placeholder="Card name"><br>
+    <input type="text" id="CardName" placeholder="Card name" readonly><br>
 
     <!-- Tekstilaatikko useammalla rivillä-->
-    <textarea id="myTextBox2" placeholder="Meaning..."></textarea>
+    <textarea id="CardMeaning" placeholder="Meaning..."readonly></textarea>
 </body>
 </html>
 
