@@ -116,7 +116,7 @@
                     meaningResult = value.meaning;
                     console.log(meaningResult);
                 }
-
+                updateTextboxes(); // Call the function to update textboxes
             }
 
             ws.onerror = (error) => {
@@ -125,7 +125,7 @@
 
             function sendRequest() {
                 ws.send("random-int");
-                updateTextboxes(); // Call the function to update textboxes
+            
             }
 
             // Function to update textboxes with the randomized variables
